@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MovieListCell" id="jmV-NG-tDx" customClass="MoviesListCell" customModule="MovieShowCase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="316" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mt-HS-Cfv" userLabel="MoivieThumbnail">
+                        <rect key="frame" x="20" y="49.5" width="93" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="93" id="Az9-cj-WVE" userLabel="width = 100"/>
+                            <constraint firstAttribute="height" constant="90" id="cST-yS-vyc" userLabel="height = 100"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ6-wV-5pA" userLabel="MovieName">
+                        <rect key="frame" x="131" y="20" width="165" height="44.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHF-TS-2SX" userLabel="ReleaseDate">
+                        <rect key="frame" x="131" y="84.5" width="165" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-Xa-LlQ">
+                        <rect key="frame" x="133" y="129" width="98" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="8OR-nT-dfu"/>
+                        </constraints>
+                        <state key="normal" title="View Details"/>
+                        <connections>
+                            <action selector="getDetails:" destination="jmV-NG-tDx" eventType="touchUpInside" id="RWz-Xj-3ew"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZHF-TS-2SX" firstAttribute="centerY" secondItem="7mt-HS-Cfv" secondAttribute="centerY" id="0Bj-1f-i4j"/>
+                <constraint firstItem="ZHF-TS-2SX" firstAttribute="leading" secondItem="7mt-HS-Cfv" secondAttribute="trailing" constant="18" id="Muz-NW-zEv" userLabel="ReleaseDate.leading = MoivieThumbnail.trailing + 10"/>
+                <constraint firstItem="eQ6-wV-5pA" firstAttribute="leading" secondItem="jmV-NG-tDx" secondAttribute="leading" constant="131" id="YCd-lP-Yia" userLabel="MovieName.leading = centerX + 70"/>
+                <constraint firstItem="eQ6-wV-5pA" firstAttribute="top" secondItem="jmV-NG-tDx" secondAttribute="top" constant="20" id="fmB-Y3-aSS"/>
+                <constraint firstAttribute="trailing" secondItem="TEd-Xa-LlQ" secondAttribute="trailing" constant="85" id="k01-Af-lKs" userLabel="trailing = Book.trailing + 50"/>
+                <constraint firstItem="7mt-HS-Cfv" firstAttribute="centerY" secondItem="jmV-NG-tDx" secondAttribute="centerY" id="kUS-1I-6az"/>
+                <constraint firstAttribute="trailing" secondItem="ZHF-TS-2SX" secondAttribute="trailing" constant="20" id="lGg-Bs-4nj"/>
+                <constraint firstItem="ZHF-TS-2SX" firstAttribute="top" secondItem="eQ6-wV-5pA" secondAttribute="bottom" constant="20" id="lIe-5D-45S"/>
+                <constraint firstAttribute="trailing" secondItem="eQ6-wV-5pA" secondAttribute="trailing" constant="20" id="oOV-7b-cis"/>
+                <constraint firstItem="TEd-Xa-LlQ" firstAttribute="top" secondItem="ZHF-TS-2SX" secondAttribute="bottom" constant="24" id="wKj-em-d0t" userLabel="Book.top = ReleaseDate.bottom + 30"/>
+                <constraint firstItem="7mt-HS-Cfv" firstAttribute="leading" secondItem="jmV-NG-tDx" secondAttribute="leading" constant="20" id="y6x-vg-RxQ" userLabel="MovieThumbnail.centerX = leading + 50"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="dBX-LY-Ap1"/>
+            <size key="customSize" width="316" height="189"/>
+            <connections>
+                <outlet property="movieName" destination="eQ6-wV-5pA" id="vOn-hq-9rJ"/>
+                <outlet property="movieThumbNail" destination="7mt-HS-Cfv" id="Wnt-XX-cpm"/>
+                <outlet property="releaseDate" destination="ZHF-TS-2SX" id="w4n-Qn-HRw"/>
+            </connections>
+            <point key="canvasLocation" x="327.536231884058" y="197.87946428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
